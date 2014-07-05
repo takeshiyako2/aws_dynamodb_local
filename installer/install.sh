@@ -7,14 +7,14 @@ daemon_script="aws_dynamodb_local"
 url="http://dynamodb-local.s3-website-us-west-2.amazonaws.com/dynamodb_local_latest"
 
 # Check preinitialization
-rm -rf dynamodb_local_[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*
+rm -rf dynamodb_local_latest
 
 echo "Downloading latest AWS DynamoDB Local..."
-wget --no-check-certificate $url
+wget --no-check-certificate $url -O dynamodb_local_latest.tar.gz
 
 echo "Installing AWS DynamoDB Local..."
-tar xzvf dynamodb_local_[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].tar.gz
-mv dynamodb_local_[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] $install_dir/aws_dynamodb_local
+mkdir -p $install_dir/aws_dynamodb_local/
+tar xzvf dynamodb_local_latest.tar.gz -C $install_dir/aws_dynamodb_local/
 
 if [ -e $initd_dir/$daemon_script ];
 then
