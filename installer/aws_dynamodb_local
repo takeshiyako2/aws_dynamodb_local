@@ -15,7 +15,7 @@ pidfile=/var/run/${prog}.pid
 logfile=/var/log/${prog}.log
 lockfile=/var/lock/subsys/${prog}
 
-cmdline="${java}/bin/java ${javaoptions} -jar ${jarprog}"
+cmdline="${java}/bin/java ${javaoptions} -jar ${jarprog} >> ${logfile} 2>&1"
 RETVAL=0
 
 # System configuration
