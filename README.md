@@ -18,4 +18,7 @@ EOT
 /etc/init.d/aws_dynamodb_local start
 
 aws dynamodb list-tables --endpoint-url http://localhost:8000
+{
+    "TableNames": []
+}
 ```
