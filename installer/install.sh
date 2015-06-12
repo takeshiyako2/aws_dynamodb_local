@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install_dir=${install_dir:-/usr/bin}
-initd_dir=${initd_dir:-/etc/rc.d/init.d}
+initd_dir=${initd_dir:-/etc/init.d}
 daemon_script="aws_dynamodb_local"
 
 url="http://dynamodb-local.s3-website-us-west-2.amazonaws.com/dynamodb_local_latest"
