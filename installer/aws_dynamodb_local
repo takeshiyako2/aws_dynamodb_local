@@ -4,7 +4,7 @@
 # description:  java application
 #
 
-java=/usr/java/default
+java=/usr
 prog=aws_dynamodb_local
 dynamodb_dir=/usr/bin/aws_dynamodb_local
 jarprog=$dynamodb_dir/DynamoDBLocal.jar
